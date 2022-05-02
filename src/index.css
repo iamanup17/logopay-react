@@ -1,13 +1,578 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Noto+Sans+Mono:wght@300&family=Poppins:ital,wght@0,400;0,700;1,300&family=Rampart+One&display=swap');
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root{
+  --bgcolor:#f1f5fd;
+  --primary-color:#6f5de7;
+  --text-color:#828286;
+  --main-text-color:#333333;
+}
+
+html{
+  font-size: 62.5%;
+}
+a{
+  text-decoration: none;
+  color:#fff;
+}
+h1,h2,h3,h4,h5,h6{
+  color: #333333;
+}
+
+/* ***************************************NAVBAR CSS********************************************* */
+
+.navbar-bg{
+  background:var(--bgcolor);
+  padding: 2rem 0;
+  z-index: 99;
+  position: relative;
+}
+.navbar-brand{
+  font-size: 2rem;
+}
+.navbar li{
+  padding: 0 2rem;
+}
+.navbar li a{
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+.navbar li a:hover{
+  color:var(--primary-color)!important;
+}
+.btn-style{
+  width: 12rem;
+  height: 4rem;
+  border-radius: 2rem;
+  color:#fff;
+  background-color:var(--primary-color);
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  transition: .3s ease all;
+}
+.btn-style:first-child{
+  margin-right: 2rem;
+}
+.btn-style:hover{
+  border:.1rem;
+  background-color: transparent;
+  color:var(--primary-color);
+  box-shadow: 0 0.2rem 0.5rem rgba(183, 171, 255, 0.5);
+}
+
+/* ***************************************NAVBAR CSS********************************************* */
+
+
+/* ***************************************HERO SECTION CSS********************************************* */
+
+header{
+  background-color: var(--bgcolor);
+  min-height: 100vh;
+  width: 100%;
+}
+.main-hero-container{
+  height: 80vh;
+  display: flex;
+}
+.main-hero-container h1{
+  text-transform: capitalize;
+  font-weight: bolder;
+}
+.main-hero-para {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin: 3rem 0 5rem 0;
+  font-weight: lighter;
+  width: 75%;
+}
+.main-hero-container h3{
+  font-weight: lighter;
+}
+
+.input-group{
+  position: relative;
+}
+
+.form-control-text{
+  position: absolute;
+  width: 40rem;
+  height: 5rem;
+  border: none;
+  outline: none;
+  padding-left: 1.5rem !important;
+  font-size: 1.4rem;
+  font-weight: lighter;
+}
+
+.input-group-button{
+  position: absolute;
+  right: 1%;
+  top: 0.5rem;
+  color: #fff;
+  background-color: var(--primary-color);
+  height: 4rem;
+  width: 20%;
+  border-radius: 2rem !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+}
+.main-herosection-images{
+  position: relative;
+}
+.main-herosection-images img{
+  width: 60%;
+  height: 75%;
+  margin-top: 10rem;
+  box-shadow: 0 0.8rem 0.8rem rgba(0,0,0,0.25);
+  border-radius: 1.5rem;
+  position: absolute;
+}
+
+.main-herosection-images .heroimg2{
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  left: 55%;
+  top: -2%;
+  box-shadow: 0.8rem 0 0.8rem rgba(0,0,0,0.25);
+
+}
+.work-container{
+  width: 90vw;
+  /* height: 40%; */
+  padding: 3rem;
+  box-shadow: 0 0.4rem 1.2rem rgba(0,0,0,0.4);
+  margin-top: -10rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+.work-container .main-heading{
+  font-size: 3rem;
+  font-weight: bolder;
+  margin-bottom: 2rem;
+  word-spacing: 1rem;
+
+}
+.work-container-subdiv{
+  width: 30%;
+  padding:1rem;
+}
+.work-container .sub-heading{
+font-size: 2rem;
+font-weight: normal;
+}
+.work-container .fontawesome-style{
+  font-size: 2.3rem;
+  color:var(--primary-color);
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+ background-color: var(--bgcolor);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin: 1.6rem auto;
+}
+
+
+/* ***************************************HERO SECTION CSS********************************************* */
+
+
+/* ***************************************ABOUT SECTION CSS********************************************* */
+
+.common-section {
+  margin: 5rem;
+}
+
+.our-services img{
+  width: 40%;
+  height: 60%;
+  margin-top: 10rem;
+  box-shadow: rgba(0,0,0,0.25) 0px 0.8rem 0.8rem;
+  border-radius:1.5rem ;
+}
+
+.our-services .mini-title{
+text-transform: uppercase;
+font-weight: normal;
+margin: 5rem 0;
+font-size: 1.5rem;
+text-align: left;
+}
+.our-services .mini-heading{
+font-weight: bolder;
+}
+.our-services-info{
+  margin-top: 4rem;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
+}
+.our-services .our-services-number{
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: transparent;
+  border:0.1rem solid var(--primary-color);
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  display: flex;justify-content: center;align-items: center;
+}
+.our-services-data{
+  padding-left: 2rem;
+}
+.our-services-data p{
+  margin: 0 1rem;
+}
+
+.our-services-rightside .our-services-rightside-content{
+  display: flex;align-items: flex-start;justify-content: center;flex-direction: column;padding-left: 8rem;
+}
+
+
+/* ***************************************ABOUT SECTION CSS********************************************* */
+
+/* ***************************************SERVICES SECTION CSS********************************************* */
+
+.service-main-container{
+  color:red;
+  margin-top: 2rem;
+  padding: 1rem 0;
+
+}
+.service-main-container .main-heading{
+
+ margin: 1rem 0;
+
+}
+.service-main-container .fontawesome-style{
+  font-size: 2.3rem;
+  color:var(--primary-color);
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+ background-color: var(--bgcolor);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin: 1.6rem 0;
+}
+
+.service-main-container .service-container-subdiv{
+  box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.25);
+}
+.service-container-subdiv .main-hero-para{
+  width: 100%;
+}
+
+.service-container-subdiv:hover{
+  background-color:var(--bgcolor);
+}
+.service-container-subdiv:hover > .fontawesome-style{
+  background-color:white
+}
+@media (min-width:1400px){
+  .service-container .col-xxl-4{
+    flex: 0 0 auto;
+    width: 30% !important;
+    margin: auto;
+  }
+}
+@media (min-width:992px){
+  .service-container .col-lg-4{
+    flex: 0 0 auto;
+    width: 30% !important;
+    margin: 2.5rem auto;
+  }
+}
+/* ***************************************SERVICES SECTION CSS********************************************* */
+
+
+
+
+/* ***************************************CONTACT US  SECTION CSS********************************************* */
+
+
+  .contactus-section{
+    margin: 4rem 0;
+  }
+  .contact-leftside img{
+    min-width: 60%;
+    width: 36rem !important;;
+    max-height: 30rem;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.25);
+  }
+  .contact-leftside .main-heading,.main-hero-para{
+    margin: 1rem 0 ;
+
+  }
+  .contact-input-field{
+    margin-bottom: 2rem;
+  }
+  .form-control{
+    width: 100%!important;
+    height: 3rem;
+  }
+
+  .contact-rightside form .form-control{
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    height: 5rem;border-radius: 0.5rem;
+    font-size: 1.6rem;
+    padding-left: 1rem;
+    font-weight: lighter;
+    width: 100% !important;
+  }
+  
+  .contact-rightside form .form-check-input{
+    width: 2em;height: 2em;
+  }
+  .form-checkbox-style{
+    margin: 4rem 0;
+  }
+  .contact-rightside form .main-hero-para{
+    font-size: 1.6rem;
+    color: var(--text-color);
+    margin: 0;
+    font-weight: lighter;width: 75%;
+    padding: 0 2rem;
+  
+}
+
+.contactus-section .form-checkbox-style{
+  margin: 2rem 0!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ***************************************CONTACT US  SECTION CSS********************************************* */
+
+
+/* ***************************************FOOTER  SECTION CSS********************************************* */
+footer{
+  padding: 2rem 0;
+  background-color: #182334;
+  color: #fff;
+}
+
+
+  footer .fontawesome-style{
+    font-size: 3rem;
+    color:var(--primary-color);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+   background:transparent;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   /* margin: 1.6rem ; */
+  }
+  footer .fontawesome-style:hover{
+    transition: all 5s ease;
+    animation : rotateFont 1s linear infinite alternate-reverse;
+    color: #fff;
+  }
+  @keyframes rotateFont {
+    0%{
+      transform:scale(0.6)
+    }
+    50%{
+      transform:scale(1.2)
+    }
+  }
+
+
+  footer h2{
+    color:#fff;
+
+  }
+  footer li{
+    list-style: none;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color:#fff;
+    cursor:pointer;
+    margin: 1rem 0;
+  }
+  footer li:hover{
+    color:var(--primary-color)
+  }
+ 
+  footer .main-hero-para{
+    margin: 0;
+    /* padding: 0; */
+  }
+/* ***************************************FOOTER  SECTION CSS********************************************* */
+
+
+/* ***************************************ERROR PAGE  SECTION CSS********************************************* */
+
+
+#notfound{
+  width:100%;
+  height: 80vh;
+ display: flex;justify-content: center;align-items: center;
+
+}
+#notfound .notfound{
+ display: flex;justify-content: center;align-items: center;flex-direction: column;
+}
+/* ***************************************ERROR PAGE  SECTION CSS********************************************* */
+
+
+
+
+
+
+
+
+
+
+
+/* ***************************************MEDIA QUERIES********************************************* */
+
+@media (max-width: 990px){
+  .navbar .navbar-collapse{
+    margin-top: 1rem;
+    background-color: #fff;
+    padding: 2rem 1rem;
+  }
+  .input-group .btn-style{
+    font-size: 1.2rem;
+  }
+
+  .main-hero-container h1{
+    font-size: 2.5rem;
+  }
+  .main-hero-para{
+    font-size:1.5rem;
+    padding-right: 1rem;
+    width: 100%;
+  }
+  .main-hero-container .header-left-side{
+    padding-left: 4rem;
+    margin-top: 2rem;
+  }
+  .main-herosection-images{
+    position: relative;
+    height: 25rem;
+  }
+  .header-right-side img{
+    width: 60%;height: 100%;margin-top: 0;
+  }
+  .input-group-button{
+    right: 2%;
+    margin-bottom: 12rem;
+    width: 30%;
+  }
+  .main-herosection-images .heroimg2{
+    width: 30%;
+  }
+  .work-container{
+    margin-top: -6%;
+    flex-direction: column;
+  }
+  
+  .work-container-subdiv{
+    width: 100%;
+    font-size: 2.7rem;
+    word-spacing: 0rem;
+    padding: 0;
+  }
+  .work-container .main-heading{
+    font-size: 2rem;
+    word-spacing: 0rem;
+    /* margin:2rem;padding: 0; */
+  }
+
+  .our-services-list{
+    padding-left: 0rem;
+  }
+  .our-services-rightside-img{
+    text-align: center;
+  }
+  .common-section {
+    margin: 0rem 3rem;
+  }
+
+  .our-services img{
+    width: 70%;
+    height: 85%;
+  }
+  .our-services .mini-title {
+    margin-bottom: 1rem;
+  }
+  .our-services-info{
+    margin-top: 2rem;
+
+  }
+  .our-services .our-service-leftside-img img{
+   margin: 4rem;
+  }
+  .service-container .work-container-subdiv{
+    padding: 0 2rem;
+    margin: 2rem auto;
+
+  }
+  .service-container .main-heading{
+    font-weight: bolder;
+    margin: 5rem auto 0 auto;
+
+  
+  }
+  .our-services-rightside .our-services-rightside-content {
+    padding-left: 0rem;
+
+  }
+  .service-main-container .service-container-subdiv {
+  
+   margin: 2rem; 
+  }
+  .our-services .mini-title{
+    margin: 2.5rem;
+  }
+}
+@media (min-width: 1500px){
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl{
+    max-width: 1500px !important;
+  }
+}
+@media (min-width: 1400px){
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl{
+    max-width: 1400px ;
+  }
+
+
+
+  /* ***************************************MEDIA QUERIES********************************************* */
+  
+
 }
